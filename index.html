@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="framework/bootstrap.css">
+    <link rel="stylesheet" href="font/FiraCode-Regular.ttf">
+    <link rel="stylesheet" href="framework/codemirror.css">
+    <link rel="stylesheet" href="framework/synthwave.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div class="container-fluid main-title">
+        <div class="row">
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-2 offset-md-2">
+                <div class="title" id="title">index.html</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid under-title ">
+        <div class="row full-height">
+            <div class="col-md-2 full-height naviagtor">
+                <div class="row full-height">
+                    <div class="col-md-2 main-left full-height">
+
+                    </div>
+                    <div class="col-md-10 mid-left full-height">
+                        <div class="explorer">EXPLORER</div>
+                        <div class="project-name">PROJECT NAME</div>
+                        <div class="file choiced" id="html-tab"><img class="icon" src="img/html.svg" alt="html"> index.html</div>
+                        <div class="file" id="css-tab"><img class="icon" src="img/css.svg" alt="css"> main.css</div>
+                        <div class="file" id="js-tab"><img class="icon" src="img/js.svg" alt="js"> index.js</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 main-content full-height">
+                <div class="col-md-12 all-file">
+                    <div class="row all-file-show">
+                        <div class="col-md-1 choiced-file" id="html"><img class="icon" src="img/html.svg" alt="html"> index.html</div>
+                        <div class="col-md-1" id="css"><img class="icon" src="img/css.svg" alt="css"> main.css</div>
+                        <div class="col-md-1" id="js"><img class="icon" src="img/js.svg" alt="js"> index.js</div>
+                    </div>
+                </div>
+                <div class="col-md-12 main-editor">
+                    <div class="row full-height">
+                        <div class="col-md-6 pop-padding">
+                            <textarea name="editor" id="editor" autocomplete="off"></textarea>
+                        </div>
+                        <div class="col-md-6 pop-padding">
+                            <iframe id="live-code"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <form runat="server">
+        <input type='file' id="imgInp" />
+    </form>
+
+    <img id="blah" src="#" alt="your image" style="width:500px; height:auto;"/> -->
+    <script src="framework/jquery.min.js"></script>
+    <script src="framework/bootstrap.js"></script>
+    <script src="framework/codemirror.js"></script>
+    <script src="framework/closetag.js"></script>
+    <script src="framework/closebrackets.js"></script>
+    <script src="framework/html-hint.js"></script>
+    <script src="framework/css-hint.js"></script>
+    <script src="framework/javascript-hint.js"></script>
+    <script src="framework/css.js"></script>
+    <script src="framework/xml.js"></script>
+    <script src="framework/htmlmixed.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
