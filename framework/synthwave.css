@@ -1,52 +1,126 @@
-/**
-    Name: IntelliJ IDEA darcula theme
-    From IntelliJ IDEA by JetBrains
- */
+.panel {
+  background:#3C3F41;
+}
 
- .cm-s-darcula  { font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;}
- .cm-s-darcula.CodeMirror { background: #262334; color: #A9B7C6; } 
- 
- .cm-s-darcula span.cm-meta { color: #BBB529; }
- .cm-s-darcula span.cm-number { color: #6897BB; }
- .cm-s-darcula span.cm-keyword { color: #CC7832; line-height: 1em; font-weight: bold; }  
- .cm-s-darcula span.cm-def { color: #A9B7C6; font-style: italic; }
- .cm-s-darcula span.cm-variable { color: #A9B7C6; }
- .cm-s-darcula span.cm-variable-2 { color: #A9B7C6; }
- .cm-s-darcula span.cm-variable-3 { color: #9876AA; }
- .cm-s-darcula span.cm-type { color: #AABBCC; font-weight: bold; }
- .cm-s-darcula span.cm-property { color: #FFC66D; }
- .cm-s-darcula span.cm-operator { color: #A9B7C6; }
- .cm-s-darcula span.cm-string { color: #6A8759; }
- .cm-s-darcula span.cm-string-2 { color: #6A8759; }
- .cm-s-darcula span.cm-comment { color: #61A151; font-style: italic; } 
- .cm-s-darcula span.cm-link { color: #CC7832; }
- .cm-s-darcula span.cm-atom { color: #CC7832; }
- .cm-s-darcula span.cm-error { color: #BC3F3C; }
- .cm-s-darcula span.cm-tag { color: #629755; font-weight: bold; font-style: italic; text-decoration: underline; }
- .cm-s-darcula span.cm-attribute { color: #6897bb; }
- .cm-s-darcula span.cm-qualifier { color: #6A8759; }
- .cm-s-darcula span.cm-bracket { color: #A9B7C6; }
- .cm-s-darcula span.cm-builtin { color: #FF9E59; }
- .cm-s-darcula span.cm-special { color: #FF9E59; }
- 
- .cm-s-darcula .CodeMirror-cursor { border-left: 1px solid #A9B7C6; }  
- .cm-s-darcula .CodeMirror-activeline-background { background: #323232; } 
- .cm-s-darcula .CodeMirror-gutters { background: #262334; border-right: 1px solid #888888; } 
- .cm-s-darcula .CodeMirror-guttermarker { color: #FFEE80; }  
- .cm-s-darcula .CodeMirror-guttermarker-subtle { color: #D0D0D0; }  
- .cm-s-darcula .CodeMirrir-linenumber { color: #606366; } 
- .cm-s-darcula .CodeMirror-matchingbracket { background-color: #3B514D; color: #FFEF28 !important; font-weight: bold; } 
- 
- .cm-s-darcula div.CodeMirror-selected { background: #214283; }  
- 
- .CodeMirror-hints.darcula {
-   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-   color: #9C9E9E;
-   background-color: #3B3E3F !important;
- }
- 
- .CodeMirror-hints.darcula .CodeMirror-hint-active {
-   background-color: #494D4E !important;
-   color: #9C9E9E !important;
- }
- 
+#status-bar,
+#status-indicators {
+  background:#242424;
+  color:#ccc;
+}
+
+#status-info {
+  color:#ccc;
+}
+
+#open-files-container,
+#working-set-header,
+#project-files-header {
+  color:#aaa;
+  background:#565A5D;
+}
+
+.jstree-brackets li.jstree-closed > a,
+.jstree-brackets li.jstree-open > a {
+  color:#ccc;
+}
+
+#open-files-container .extension,
+.jstree-brackets li .extension {
+  color:#aaa;
+}
+
+.cm-s-zamiere.CodeMirror {
+  background-color:#262334;
+  color:#fff;
+}
+
+.cm-s-zamiere.CodeMirror div.CodeMirror-cursor {
+  border-left:1px solid #f8f8f0;
+  z-index:3;
+}
+
+.cm-s-zamiere .CodeMirror-selected {
+  background:#676767;
+  opacity:.5;
+}
+
+.cm-s-zamiere .cm-keyword    {color:#FFCC33;}
+.cm-s-zamiere .cm-atom       {color:#99CC66;}
+.cm-s-zamiere .cm-number     {color:#99CC66;}
+.cm-s-zamiere .cm-def        {color:#A9D158;}
+.cm-s-zamiere .cm-variable   {color:#34A2D9;}
+.cm-s-zamiere .cm-variable-2 {color:#3399CC;}
+.cm-s-zamiere .cm-property   {color:#DAD6CD;}
+.cm-s-zamiere .cm-operator   {color:#36f9f6;}
+.cm-s-zamiere .cm-comment    {color:#747166;}
+.cm-s-zamiere .cm-string     {color:#A9D158;}
+.cm-s-zamiere .cm-string-2   {color:#A9D158;}
+.cm-s-zamiere .cm-meta       {color:#FFCC33;}
+.cm-s-zamiere .cm-qualifier  {color:#FFCC33;}
+.cm-s-zamiere .cm-bracket    {color:#FFFFFF;}
+.cm-s-zamiere .cm-tag        {color:#FFCC33;}
+.cm-s-zamiere .cm-attribute  {color:#FFCC33;}
+
+.cm-s-zamiere.CodeMirror span.CodeMirror-matchingbracket {
+  color:#00CCFF;
+  text-shadow:0 0 3px #00CCFF;
+}
+
+.cm-s-zamiere .cm-matchhighlight {
+  box-shadow:0 0 5px #00CCFF;
+  background-color: #00CCFF;
+  color: black;
+  border-radius:2px;
+}
+
+.cm-s-zamiere .CodeMirror-searching {
+  color:#000;
+}
+
+.cm-s-zamiere .cm-matchhighlight:not(.CodeMirror-selectedtext) {
+  background-color: rgba(0, 204, 255, 0.4);
+  box-shadow:0 0 5px #00CCFF;
+  color:#ccc;
+  border-radius:2px;
+}
+
+.cm-s-zamiere .CodeMirror-activeline-background {
+  background:hsla(0,0%,0%,0.5)!important;
+  margin:-1px -10px;
+}
+
+.cm-s-zamiere .CodeMirror-activeline .CodeMirror-gutter-elt {
+  color: #eeeeee;
+}
+
+.cm-s-zamiere div.CodeMirror-gutter {
+  color:#ccc;
+}
+
+.cm-s-zamiere div.CodeMirror-gutters {
+  background-color:#262334;
+  border-right: 1px solid #2e2d4a;
+}
+
+.cm-s-zamiere span.CodeMirror-widget {
+  margin:-3px 0px;
+  display:inline-block;
+}
+.cm-s-zamiere span.CodeMirror-foldmarker {
+  display:inline-table;
+  background:#ccc;
+  border:0;
+  color:#000;
+  border-radius:3px;
+  font-size:20px;
+  margin:3px;
+  padding:0px 5px;
+  height:15px;
+  line-height:15px;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+#status-overwrite {
+  color:white;
+}
