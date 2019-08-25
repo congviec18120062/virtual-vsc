@@ -24,6 +24,26 @@ html,body {
     width: 10px;
 }
 
+.icon2 {
+    width: 40px;
+}
+
+.top-option>div {
+    padding-left: 0px;
+}
+
+.top-option>div:nth-child(2) {
+    color: #acaaae;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.top-option>div:nth-child(2):hover {
+    background: #3a3244;
+}
+
 .under-title {
     height: calc(100% - 30px);
 }
@@ -43,11 +63,11 @@ html,body {
     padding-right: 0;
 }
 
-.mid-left>div {
+.mid-left>div:not(:first-child) {
     cursor: pointer;
 }
 
-.mid-left>div:hover {
+.mid-left>div:not(:first-child):hover {
     color: white;
 }
 
@@ -73,6 +93,38 @@ html,body {
     line-height: 22px;
     font-size: 0.7rem;
     padding-left: 35px;
+}
+
+.open-file {
+    background: #463465;
+    color: #dedce1;
+    position: absolute;
+    top: 30px;
+    width: 250px;
+    z-index: 2;
+    font-size: 0.8rem;
+    line-height: 25px;
+    padding-top: 10px;
+    
+    padding-bottom: 10px;
+}
+
+.open-file>hr {
+    border: 1px solid #6d5f86;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 16px;
+    margin-right: 15px;
+}
+
+.open-file>div {
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.open-file>div:hover {
+    background: #6d5f86;
 }
 
 .choiced {

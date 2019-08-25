@@ -1,17 +1,3 @@
-// function readURL(input) {
-//     if (input.files && input.files[0]) {
-//         var reader = new FileReader();
-//         reader.onload = function(e) {
-//             $('#blah').attr('src', e.target.result);
-//         }
-//         reader.readAsDataURL(input.files[0]);
-//     }
-// }
-  
-// $("#imgInp").change(function() {
-//     readURL(this);
-// });
-
 var html = document.getElementById("html");
 var css = document.getElementById("css");
 var js = document.getElementById("js");
@@ -21,6 +7,11 @@ var jsTab = document.getElementById("js-tab");
 var closeHtml = document.getElementById("close-html");
 var closeCss = document.getElementById("close-css");
 var closeJs = document.getElementById("close-js");
+
+var title = document.getElementById("title");
+
+var file = document.getElementById("file");
+var open_file = document.getElementById("open-file");
 
 var myTextArea = document.getElementById("editor");
 var choice = [html, css, js];
@@ -114,6 +105,14 @@ editor.on("change", () => {
     code.close();
 })
 
+file.addEventListener("click", e => {
+    if (open_file.classList.value.split(" ").filter(value => value == "close").length) {
+        open_file.classList.remove("close");
+    } else {
+        open_file.classList.add("close");
+    }
+})
+
 html.addEventListener("click", e => {
     e.stopPropagation();
     e.preventDefault();
@@ -122,7 +121,8 @@ html.addEventListener("click", e => {
         htmlTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         html.classList.add("choiced-file");
-        editor.setValue(htmlContent)
+        editor.setValue(htmlContent);
+        title.innerHTML = "index.html";
     }
     
 })
@@ -135,7 +135,8 @@ css.addEventListener("click", e => {
         cssTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         css.classList.add("choiced-file");
-        editor.setValue(cssContent)
+        editor.setValue(cssContent);
+        title.innerHTML = "main.css";
     }
 })
 
@@ -147,7 +148,8 @@ js.addEventListener("click", e => {
         jsTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         js.classList.add("choiced-file");
-        editor.setValue(jsContent)
+        editor.setValue(jsContent);
+        title.innerHTML = "index.js";
     }
 })
 
@@ -159,7 +161,8 @@ htmlTab.addEventListener("click", e => {
     htmlTab.classList.add("choiced");
     clearClass(choice, "choiced-file");
     html.classList.add("choiced-file");
-    editor.setValue(htmlContent)
+    editor.setValue(htmlContent);
+    title.innerHTML = "index.html";
 })
 
 cssTab.addEventListener("click", e => {
@@ -170,7 +173,8 @@ cssTab.addEventListener("click", e => {
     cssTab.classList.add("choiced");
     clearClass(choice, "choiced-file");
     css.classList.add("choiced-file");
-    editor.setValue(cssContent)
+    editor.setValue(cssContent);
+    title.innerHTML = "main.css";
 })
 
 jsTab.addEventListener("click", e => {
@@ -181,7 +185,8 @@ jsTab.addEventListener("click", e => {
     jsTab.classList.add("choiced");
     clearClass(choice, "choiced-file");
     js.classList.add("choiced-file");
-    editor.setValue(jsContent)
+    editor.setValue(jsContent);
+    title.innerHTML = "index.js";
 })
 
 closeHtml.addEventListener("click", e => {
@@ -191,23 +196,24 @@ closeHtml.addEventListener("click", e => {
         cssTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         css.classList.add("choiced-file");
-        editor.setValue(cssContent)
+        editor.setValue(cssContent);
+        title.innerHTML = "main.css";
     } else if (temp[2]) {
         clearClass(choiced, "choiced");
         jsTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         js.classList.add("choiced-file");
-        editor.setValue(jsContent)
+        editor.setValue(jsContent);
+        title.innerHTML = "index.js";
     } else {
         clearClass(choiced, "choiced");
         clearClass(choice, "choiced-file");
         editor.setValue("")
         editor.setOption("readOnly", true);
+        title.innerHTML = "";
     }
     html.classList.add("close");
 })
-
-
 
 closeCss.addEventListener("click", e => {
     temp[1] = 0
@@ -216,18 +222,21 @@ closeCss.addEventListener("click", e => {
         jsTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         js.classList.add("choiced-file");
-        editor.setValue(jsContent)
+        editor.setValue(jsContent);
+        title.innerHTML = "index.js";
     } else if (temp[0]) {
         clearClass(choiced, "choiced");
         htmlTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         html.classList.add("choiced-file");
-        editor.setValue(htmlContent)
+        editor.setValue(htmlContent);
+        title.innerHTML = "index.html";
     } else {
         clearClass(choiced, "choiced");
         clearClass(choice, "choiced-file");
         editor.setValue("")
         editor.setOption("readOnly", true);
+        title.innerHTML = "";
     }
     css.classList.add("close");
 })
@@ -239,18 +248,21 @@ closeJs.addEventListener("click", e => {
         cssTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         css.classList.add("choiced-file");
-        editor.setValue(cssContent)
+        editor.setValue(cssContent);
+        title.innerHTML = "main.css";
     } else if (temp[0]) {
         clearClass(choiced, "choiced");
         htmlTab.classList.add("choiced");
         clearClass(choice, "choiced-file");
         html.classList.add("choiced-file");
-        editor.setValue(htmlContent)
+        editor.setValue(htmlContent);
+        title.innerHTML = "index.html";
     } else {
         clearClass(choiced, "choiced");
         clearClass(choice, "choiced-file");
         editor.setValue("")
         editor.setOption("readOnly", true);
+        title.innerHTML = "";
     }
     js.classList.add("close");
 })

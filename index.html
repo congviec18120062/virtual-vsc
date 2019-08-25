@@ -18,10 +18,18 @@
     </style>
 </head>
 <body>
+    <div class="open-file close" id="open-file">
+        <div>New File</div>
+        <hr>
+        <div>Open File</div>
+    </div>
     <div class="container-fluid main-title">
         <div class="row">
             <div class="col-md-3">
-                
+                <div class="row top-option">
+                    <div class="col-md-1"><img class="icon2" src="img/avengers.svg" alt="icon"></div>
+                    <div class="col-md-1" id="file">File</div>
+                </div>
             </div>
             <div class="col-md-2 offset-md-2">
                 <div class="title" id="title">index.html</div>
@@ -39,15 +47,15 @@
                         <div class="explorer">EXPLORER</div>
                         <div class="project-name">PROJECT NAME</div>
                         <div class="file choiced" id="html-tab">
-                            <img class="icon" src="./img/html.svg" alt="html"> 
+                            <img class="icon" src="img/html.svg" alt="html"> 
                             index.html
                         </div>
                         <div class="file" id="css-tab">
-                            <img class="icon" src="./img/css.svg" alt="css"> 
+                            <img class="icon" src="img/css.svg" alt="css"> 
                             main.css
                         </div>
                         <div class="file" id="js-tab">
-                            <img class="icon" src="./img/js.svg" alt="js"> 
+                            <img class="icon" src="img/js.svg" alt="js"> 
                             index.js
                         </div>
                     </div>
@@ -57,19 +65,19 @@
                 <div class="col-md-12 all-file">
                     <div class="row all-file-show">
                         <div class="col-md-2 choiced-file" id="html">
-                            <img class="icon" src="./img/html.svg" alt="html"> 
+                            <img class="icon" src="img/html.svg" alt="html"> 
                             index.html
-                            <img class="icon1 right" src="./img/x.svg" alt="icon" id="close-html">
+                            <img class="icon1 right" src="img/x.svg" alt="icon" id="close-html">
                         </div>
                         <div class="col-md-2" id="css">
-                            <img class="icon" src="./img/css.svg" alt="css"> 
+                            <img class="icon" src="img/css.svg" alt="css"> 
                             main.css
-                            <img class="icon1 right" src="./img/x.svg" alt="icon" id="close-css">
+                            <img class="icon1 right" src="img/x.svg" alt="icon" id="close-css">
                         </div>
                         <div class="col-md-2 " id="js">
-                            <img class="icon" src="./img/js.svg" alt="js"> 
+                            <img class="icon" src="img/js.svg" alt="js"> 
                             index.js
-                            <img class="icon1 right" src="./img/x.svg" alt="icon" id="close-js">
+                            <img class="icon1 right" src="img/x.svg" alt="icon" id="close-js">
                         </div>
                     </div>
                 </div>
@@ -86,11 +94,7 @@
             </div>
         </div>
     </div>
-    <!-- <form runat="server">
-        <input type='file' id="imgInp" />
-    </form>
-
-    <img id="blah" src="#" alt="your image" style="width:500px; height:auto;"/> -->
+    
     <script src="framework/jquery.min.js"></script>
     <script src="framework/bootstrap.js"></script>
     <script src="framework/codemirror.js"></script>
